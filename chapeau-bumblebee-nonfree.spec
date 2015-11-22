@@ -3,7 +3,7 @@
 Summary:	Chapeau meta-package for bumblebee nvidia prorietory drivers
 Name:		chapeau-bumblebee-nonfree
 Version:	1
-Release:	1%{?dist}
+Release:	2%{?dist}
 License:	GPL v2
 Group:		Chapeau
 URL:		http://chapeaulinux.org
@@ -26,11 +26,11 @@ Requires:	automake
 Requires:	gcc
 Requires:	gtk2-devel
 Requires:	bbswitch-dkms
-Requires:	bumblebee-nvidia.x86_64
-Requires:	VirtualGL.x86_64
-Requires:	VirtualGL.i686
-Requires:	primus.x86_64
-Requires:	primus.i686
+Requires:	bumblebee-nvidia
+Requires:	VirtualGL
+Requires:	VirtualGL(x86-32)
+Requires:	primus
+Requires:	primus(x86-32)
 
 %description
 A meta package which requires the bumblebee nonfree nvidia drivers packages
@@ -52,6 +52,9 @@ A meta package which requires the bumblebee nonfree nvidia drivers packages
 
 
 %changelog
-* Fri Nov 20 2014 Vince Pooley <vince@chapeaulinux.org>
+* Sun Nov 22 2015 Vince Pooley <vince@chapeaulinux.org>
+- Incorrect architecture declarations fixed
+
+* Fri Nov 20 2015 Vince Pooley <vince@chapeaulinux.org>
 - initial release
 
